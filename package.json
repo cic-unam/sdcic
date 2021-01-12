@@ -1,7 +1,7 @@
 {
   "name": "@cic-unam/sdcic",
   "version": "0.0.0",
-  "description": "Sistema de diseño de la CIC",
+  "description": "Sistema de Diseño de la Coordinación de la Investigación Científica",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -37,7 +37,7 @@
     "start": "react-scripts start",
     "build": "cross-env BABEL_ENV=production babel src -d dist -D src/assets",
     "test": "react-scripts test",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006  -s public",
     "build-storybook": "build-storybook -o docs-build --docs"
   },
   "eslintConfig": {

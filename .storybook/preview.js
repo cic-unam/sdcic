@@ -1,4 +1,4 @@
-// SDB 1.0
+// SDCIC 1.0
 // Previsualización de historias
 
 import React from 'react';
