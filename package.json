@@ -1,0 +1,71 @@
+{
+  "name": "@soft4pilot/sdb",
+  "version": "0.1.1",
+  "description": "Sistema de diseño básico",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "git://github.com/soft4pilot/sdb.git",
+  "author": "José Esteva <josesteva@soft4pilot.com.mx>",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.11.6",
+    "@storybook/addon-actions": "^6.0.21",
+    "@storybook/addon-docs": "^6.0.21",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/addon-links": "^6.0.21",
+    "@storybook/addons": "^6.0.28",
+    "@storybook/node-logger": "^6.0.21",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.21",
+    "@storybook/theming": "^6.0.28",
+    "auto": "^10.2.1",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "react-is": "^16.13.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "cross-env BABEL_ENV=production babel src -d dist -D src/assets",
+    "test": "react-scripts test",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -o docs-build --docs"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

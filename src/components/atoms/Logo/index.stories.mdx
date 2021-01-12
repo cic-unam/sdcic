@@ -1,0 +1,34 @@
+<!--
+SBD 1.0
+Guía de estilo
+Logotipo (Logo)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Logo from './index';
+
+<Meta title="Átomos/Logotipo" component={Logo} />
+
+## Logotipo (Logo)
+
+<Description of={Logo} />
+
+<ArgsTable of={Logo} />
+
+Logotipo básico
+
+<Story name="Base">
+  <Logo />
+</Story>
+
+Logotipo de otra institución
+
+<Story name="Otra institución">
+  <Logo name="graphql"/>
+</Story>
+
+Logotipo de otro color y tamaño
+
+<Story name="Modificado">
+  <Logo name="react" color="grey" size="192px"/>
+</Story>

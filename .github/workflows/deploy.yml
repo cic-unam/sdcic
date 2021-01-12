@@ -1,0 +1,32 @@
+# SDB 1.0
+# Integración continua
+# Publicar la guía de estilos (storybook)
+# Adaptado de https://dev.to/kouts/deploy-storybook-to-github-pages-3bij
+
+name: Deploy
+on:
+  push:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtener la última versión del código fuente
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - name: Instalar dependencias y contruir la guía de estilo
+        run: | # Install npm packages and build the Storybook files
+          yarn
+          CI= yarn build-storybook
+
+      - name: Publicar la guía de estilo
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs-build
+          CLEAN: true

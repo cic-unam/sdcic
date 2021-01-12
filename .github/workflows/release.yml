@@ -1,0 +1,40 @@
+# SDB 1.0
+# Integración continua
+# Crear un lanzamiento del sistema
+# Tomado de https://www.learnstorybook.com/design-systems-for-developers
+
+## Crear un lanzamiento del SDB
+name: Release
+
+# Esta acción se ejecuta al mezclar una solicitud de extracción (pull request) con la rama principal (master)
+on:
+  push:
+    branches: [master]
+
+jobs:
+  release:
+
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
+
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Preparar el repositorio
+        run: git fetch --unshallow --tags
+
+      - name: Configurar el paquete para GitHub Packages
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: Crear el lanzamiento
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          yarn
+          CI= yarn build
+          yarn auto shipit --no-changelog --only-publish-with-release-label

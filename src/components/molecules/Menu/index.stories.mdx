@@ -1,0 +1,39 @@
+<!--
+SBD 1.0
+Menu (Menú)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Menu from './index';
+
+<Meta title="Moléculas/Menú" component={Menu} />
+
+export const Items = [
+  {label: 'Enlace', url: '#'},
+  {label: 'Enlace', url: '#'},
+  {label: 'Enlace', url: '#'},
+  {label: 'Enlace', url: '#'},
+  {label: 'Enlace', url: '#'}
+];
+
+## Menú (Menu)
+
+<Description of={Menu} />
+
+<ArgsTable of={Menu} />
+
+Menú normal
+
+<Story name="Normal">
+  <div style={{padding:'8px 16px'}}>
+    <Menu items={Items}/>
+  </div>
+</Story>
+
+Menú invertido
+
+<Story name="Invertido">
+  <div style={{background:'#001a33', padding:'8px 16px'}}>
+    <Menu items={Items} inverted/>
+  </div>
+</Story>

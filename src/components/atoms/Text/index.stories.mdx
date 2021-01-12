@@ -1,0 +1,48 @@
+<!--
+SBD 1.0
+Guía de estilo
+Text (Párrafo)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Text from './index';
+
+<Meta title="Átomos/Texto" component={Text} />
+
+## Texto (Text)
+
+<Description of={Text} />
+
+<ArgsTable of={Text} />
+
+Texto predeterminado
+
+<Story name="Normal">
+  <Text>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </Text>
+</Story>
+
+Texto de diferente color
+
+<Story name="Cambiar color">
+  <Text color="grey">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </Text>
+</Story>
+
+Texto con diferente alineación
+
+<Story name="Cambiar alineación">
+  <Text align="right">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </Text>
+</Story>
+
+Texto de diferente tamaño
+
+<Story name="Cambiar tamaño">
+  <Text size="24px">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </Text>
+</Story>

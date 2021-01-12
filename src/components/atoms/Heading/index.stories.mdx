@@ -1,0 +1,34 @@
+<!--
+SBD 1.0
+Guía de estilo
+Heading (Encabezado)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Heading from './index';
+
+<Meta title="Átomos/Encabezado" component={Heading} />
+
+## Encabezado (Heading)
+
+<Description of={Heading} />
+
+<ArgsTable of={Heading} />
+
+Encabezado normal
+
+<Story name="Base">
+  <Heading level={1}>Encabezado</Heading>
+</Story>
+
+Encabezado con subtitulo
+
+<Story name="Con subtitulo">
+  <Heading level={1}>Encabezado <small>Subtitulo</small></Heading>
+</Story>
+
+Encabezado modificado
+
+<Story name="Modificado">
+  <Heading level={1} size="64px" color="grey">Encabezado <small>Subtitulo</small></Heading>
+</Story>

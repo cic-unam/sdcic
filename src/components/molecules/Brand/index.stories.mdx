@@ -1,0 +1,27 @@
+<!--
+SBD 1.0
+Marca (Brand)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Brand from './index';
+
+<Meta title="Moléculas/Marca" component={Brand} />
+
+## Marca (Brand)
+
+<Description of={Brand} />
+
+<ArgsTable of={Brand} />
+
+Marca predeterminada
+
+<Story name="Normal">
+  <Brand />
+</Story>
+
+Cambiar el tamaño y el color del logotipo
+
+<Story name="Modificado">
+  <Brand size='96px' color='grey' href='https://soft4pilot.com.mx'/>
+</Story>

@@ -1,0 +1,34 @@
+<!--
+SBD 1.0
+Guía de estilo
+Icon (Ícono)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Icon from './index';
+
+<Meta title="Átomos/Ícono" component={Icon} />
+
+## Ícono (Icon)
+
+<Description of={Icon} />
+
+<ArgsTable of={Icon} />
+
+Ícono básico
+
+<Story name="Base">
+  <Icon name="cloud-data"/>
+</Story>
+
+Ícono de otro color
+
+<Story name="Cambiar color">
+  <Icon name="cloud-data" color="grey"/>
+</Story>
+
+Ícono de otro tamaño
+
+<Story name="Cambiar tamaño">
+  <Icon name="cloud-data" size="64px"/>
+</Story>

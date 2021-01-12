@@ -1,0 +1,28 @@
+<!--
+SBD 1.0
+Guía de estilo
+Button (Botón)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Button from './index';
+
+<Meta title="Átomos/Botón" component={Button} />
+
+## Botón (Button)
+
+<Description of={Button} />
+
+<ArgsTable of={Button} />
+
+Botón normal
+
+<Story name="Normal">
+  <Button>Texto</Button>
+</Story>
+
+Botón deshabilitado
+
+<Story name="Deshabilitado">
+  <Button disabled>Texto</Button>
+</Story>

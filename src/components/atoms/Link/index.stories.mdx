@@ -1,0 +1,32 @@
+<!--
+SBD 1.0
+Guía de estilo
+Link (Enlace)
+-->
+
+import { ArgsTable, Description, Meta, Story } from '@storybook/addon-docs/blocks';
+import Link from './index';
+
+<Meta title="Átomos/Enlace" component={Link} />
+
+## Enlace (Link)
+
+<Description of={Link} />
+
+<ArgsTable of={Link} />
+
+Enlace normal
+
+<Story name="Normal">
+  <span style={{padding:'8px 16px'}}>
+    <Link>Enlace</Link>
+  </span>
+</Story>
+
+Enlace invertido
+
+<Story name="Invertido">
+  <span style={{background:'#001a33', padding:'8px 16px'}}>
+    <Link inverted>Enlace</Link>
+  </span>
+</Story>
