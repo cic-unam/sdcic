@@ -1,6 +1,6 @@
 {
   "name": "@cic-unam/sdcic",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Sistema de Diseño de la Coordinación de la Investigación Científica",
   "main": "dist/index.js",
   "files": [
