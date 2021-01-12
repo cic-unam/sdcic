@@ -1,13 +1,13 @@
 {
-  "name": "@soft4pilot/sdb",
-  "version": "0.1.1",
-  "description": "Sistema de diseño básico",
+  "name": "@cic-unam/sdcic",
+  "version": "0.0.0",
+  "description": "Sistema de Diseño de la Coordinación de la Investigación Científica",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "repository": "git://github.com/soft4pilot/sdb.git",
-  "author": "José Esteva <josesteva@soft4pilot.com.mx>",
+  "repository": "git://github.com/cic-unam/sdcic.git",
+  "author": "José Esteva <josesteva@cic.unam.mx>",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",
@@ -37,7 +37,7 @@
     "start": "react-scripts start",
     "build": "cross-env BABEL_ENV=production babel src -d dist -D src/assets",
     "test": "react-scripts test",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006  -s public",
     "build-storybook": "build-storybook -o docs-build --docs"
   },
   "eslintConfig": {

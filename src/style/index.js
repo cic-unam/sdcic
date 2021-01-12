@@ -1,4 +1,4 @@
-// SBD 1.0
+// SDCIC 1.0
 // Estilo general ()
 
 import React from 'react';
