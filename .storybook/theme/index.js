@@ -19,7 +19,7 @@ export default create({
   // appBorderRadius: 4,
   //
   // Typography
-  fontBase: '"Nunito", sans-serif',
+  fontBase: '"Open Sans", sans-serif',
   fontCode: 'monospace',
   //
   // // Text colors
@@ -37,8 +37,8 @@ export default create({
   // inputTextColor: 'black',
   // inputBorderRadius: 4,
 
-  brandTitle: 'Sistema de Diseño Básico',
-  brandUrl: 'https://soft4pilot.com.mx',
-  brandImage: 'https://drive.google.com/uc?export=view&id=1haZS0mSD6oLCX0ldb88jCD21kmuL9fZx',
+  brandTitle: 'Coordinación de la investigación Cinetífica',
+  brandUrl: 'http://www.cic-ctic.unam.mx/',
+  brandImage: 'https://drive.google.com/file/d/1k_MvV0gUp4dZM85GsacItpNUDFA0ZmpX/view?usp=sharing',
 
 });
